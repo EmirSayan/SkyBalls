@@ -29,10 +29,10 @@ public class Enemy : MonoBehaviour
         if(transform.position.y < -9 && !scoreGiven)
         {
             scoreGiven = true;
-            SpawnMenager.sm.scoreMiktari++;
-            SpawnMenager.sm.scoreText.text = System.Convert.ToString(SpawnMenager.sm.scoreMiktari);
-            SpawnMenager.sm.lastScore.text = System.Convert.ToString(SpawnMenager.sm.scoreMiktari);
-            SpawnMenager.sm.lastScore2.text = System.Convert.ToString(SpawnMenager.sm.scoreMiktari);
+            SpawnMenager.sm.score++;
+            SpawnMenager.sm.scoreText.text = System.Convert.ToString(SpawnMenager.sm.score);
+            SpawnMenager.sm.lastScore.text = System.Convert.ToString(SpawnMenager.sm.score);
+            SpawnMenager.sm.lastScore2.text = System.Convert.ToString(SpawnMenager.sm.score);
         }
 
         

@@ -14,7 +14,7 @@ public class SpawnMenager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI lastScore;
     public TextMeshProUGUI lastScore2;
-    public float scoreMiktari =0;
+    public float score =0;
     public static SpawnMenager sm;
     void Start()
     {
@@ -30,17 +30,17 @@ public class SpawnMenager : MonoBehaviour
     {
         if(playerControllerScript.gameOver == false)
         {
-            scoreText.text = (int)scoreMiktari + " ";
+            scoreText.text = (int)score + " ";
         }
-        if(scoreMiktari > PlayerPrefs.GetInt("_highScore"))
+        if(score > PlayerPrefs.GetInt("_highScore"))
         {
-            PlayerPrefs.SetInt("_highScore", (int)scoreMiktari);
+            PlayerPrefs.SetInt("_highScore", (int)score);
         }
         if(playerControllerScript.gameOver == false)
         {
-            lastScore.text = (int)scoreMiktari + " ";
+            lastScore.text = (int)score + " ";
         
-            lastScore2.text = (int)scoreMiktari + " ";
+            lastScore2.text = (int)score + " ";
         }
 
         enemyCount = FindObjectsOfType<Enemy>().Length;
